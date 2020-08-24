@@ -22,7 +22,8 @@ dataset)
 
 1.  Loading and then cleaning up the feature names (special characters
     replaced with underscores and duplicates removed, all letters set to
-    lowercase, and repeating words removed).
+    lowercase, repeating words removed, and single letter abbreviations
+    t and f replaced with time/freq).
 2.  Load test and train files into data frames and name variables in
     each (using cleaned up feature names, with names manually added for
     subjectID, activityID )
@@ -46,9 +47,9 @@ dataset)
 
 #### The dataset includes the following files:
 
--   'README.Rmd' this file.
+-   'README.md' this file.
 -   'dataset\_summary.txt: The summarized output.
--   'CodeBook.Rmd': Description of variables.
+-   'CodeBook.md': Description of variables.
 
 Notes regarding the source dataset used to create the merged and summarized output
 ----------------------------------------------------------------------------------
