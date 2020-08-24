@@ -46,8 +46,8 @@ dataset)
 
 #### The dataset includes the following files:
 
--   'README.md' this file.
--   'dataset\_summary.csv': The summarized output.
+-   'README.Rmd' this file.
+-   'dataset\_summary.txt: The summarized output.
 -   'CodeBook.Rmd': Description of variables.
 
 Notes regarding the source dataset used to create the merged and summarized output

@@ -7,8 +7,8 @@
 ## Load stringr package to make string manipulation easier ##
 library(stringr)
 
-## set base directory for input, feature name, and output files ##
-base_dir <- "C:/Jordan_Local/Coursera DataScience/Class3_Data/getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset/"
+## set base directory for input, feature name, and output files, add backslash so it can be used to build a path ##
+base_dir <- paste(getwd(),"/",sep="")
 
 ## read in feature names for test, train files ##
 df_features<- read.table(paste(base_dir, "features.txt", sep=""),header = FALSE)
@@ -24,8 +24,11 @@ df_features[,2] <- str_replace_all(df_features[,2],"\\,","")
 df_features[,2] <- gsub("_$","",df_features[,2])
 ##make everything lowercase
 df_features[,2] <- str_to_lower(df_features[,2])
+##replace duplicates 
 df_features[,2] <- str_replace_all(df_features[,2],"bodybody","body")
-
+##replace t with time, f with freq
+df_features[,2] <- gsub("^t","time_",df_features[,2])
+df_features[,2] <- gsub("^f","freq_",df_features[,2])
 
 #### SECTION 2: read in test + train data, label and subject ID files along with activity name file ####
 
@@ -67,8 +70,8 @@ dt_combo <- setDT(df_combo)
 ##summarize(df_combo,c("activityid","subject","activitylabel"),function(fld){if(class(fld)=="numeric"){mean(fld)}else{}})
 df_final <- as.data.frame(df_combo %>% group_by(subject,activityid,activitylabel) %>%summarize_all(mean))
 
-## print out sample of results ##
-write.csv(df_final,paste(base_dir,"dataset_summary.csv"), row.names=FALSE)
+## write or print out sample of results ##
+write.table(df_final,file=paste(base_dir,"dataset_summary.txt"),row.names=FALSE)
 
 
 

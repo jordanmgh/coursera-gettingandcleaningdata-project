@@ -20,7 +20,7 @@ That source dataset was comprised of a test file, a training file- each with 561
 
 ####The analysis script "run_analysis.R" creates the output "dataset_summary.csv" file via the following steps: 
 
-1. Loading and then cleaning up the feature names (special characters replaced with underscores and duplicates removed, all letters set to lowercase, and repeating words removed).
+1. Loading and then cleaning up the feature names (special characters replaced with underscores and duplicates removed, all letters set to lowercase, repeating words removed, and single letter abbreviations t and f replaced with time/freq).
 2. Load test and train files into data frames and name variables in each (using cleaned up feature names, with names manually added for subjectID, activityID )
 3. Vertically merging the test and training datasets into one data frame.
 4. Adding activity names via merge between activity label data frame and combined test/train dataframe.
@@ -36,7 +36,7 @@ That source dataset was comprised of a test file, a training file- each with 561
 
 #### The dataset includes the following files:
 - 'README.Rmd' this file.
-- 'dataset_summary.csv': The summarized output.
+- 'dataset_summary.txt: The summarized output.
 - 'CodeBook.Rmd': Description of variables.  
     
 ## Notes regarding the source dataset used to create the merged and summarized output
