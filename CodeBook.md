@@ -3968,24 +3968,3 @@ angle\_zgravitymean
 </tr>
 </tbody>
 </table>
-
-------------------------------------------------------------------------
-
-Report generation information:
-
--   Created by: Hyam, Jordan (164) (username: `JOHYMAN`).
-
--   Report creation time: Mon Aug 24 2020 14:51:23
-
--   Report was run from directory:
-    `C:/Jordan_Local/Coursera DataScience/Class3_Data/getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset`
-
--   dataMaid v1.4.0 \[Pkg: 2019-12-10 from CRAN (R 3.6.3)\]
-
--   R version 3.6.2 (2019-12-12).
-
--   Platform: x86\_64-w64-mingw32/x64 (64-bit)(Windows &gt;= 8 x64
-    (build 9200)).
-
--   Function call:
-    `dataMaid::makeDataReport(data = df_final, mode = "summarize",  smartNum = FALSE, file = "C:/Jordan_Local/Coursera DataScience/Class3_Data/project_files/Codebook/CodeBook.Rmd",  replace = TRUE, checks = list(character = "showAllFactorLevels",      factor = "showAllFactorLevels", labelled = "showAllFactorLevels",      haven_labelled = "showAllFactorLevels", numeric = NULL,      integer = NULL, logical = NULL, Date = NULL), listChecks = FALSE,  maxProbVals = Inf, addSummaryTable = FALSE, codebook = TRUE,  reportTitle = "HAR Summary Dataset Codebook")`
